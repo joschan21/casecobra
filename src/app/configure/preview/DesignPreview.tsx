@@ -19,14 +19,13 @@ import LoginModal from '@/components/LoginModal'
 const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
   const router = useRouter()
   const { toast } = useToast()
-  const { id } = configuration
   const { user } = useKindeBrowserClient()
   const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false)
 
   const [showConfetti, setShowConfetti] = useState<boolean>(false)
   useEffect(() => setShowConfetti(true))
 
-  const { color, model, finish, material } = configuration
+  const { color, model, finish, material, id } = configuration
 
   const tw = COLORS.find((supportedColor) => supportedColor.value === color)?.tw
 
