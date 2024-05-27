@@ -8,10 +8,10 @@ import { COLORS } from '@/validators/option-validator';
 
 const PhonePreview = ({
   croppedImageUrl,
-  color,
+  userColor,
 }: {
   croppedImageUrl: string
-  color: CaseColor
+  userColor: CaseColor
 }) => {
   const ref = useRef<HTMLDivElement>(null)
 
