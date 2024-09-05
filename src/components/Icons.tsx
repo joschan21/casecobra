@@ -1,8 +1,11 @@
 import { LucideProps } from 'lucide-react'
 
 export const Icons = {
-  underline: (props: LucideProps) => (
-    <svg {...props} viewBox='0 0 687 155'>
+  underline: ({
+    className,
+    ...props
+  }: LucideProps & { className?: string }) => (
+    <svg {...props} className={className} viewBox='0 0 687 155'>
       <g
         stroke='currentColor'
         strokeWidth='7'
